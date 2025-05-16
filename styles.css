@@ -145,3 +145,23 @@
     transform: rotate(-45deg) scale(1);
   }
 }
+
+
+#playMusic {
+  background-color: #a259ff; /* violeta suave */
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(162, 89, 255, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+#playMusic:hover {
+  background-color: #843bde;
+  box-shadow: 0 6px 12px rgba(132, 59, 222, 0.4);
+  transform: scale(1.05);
+}
