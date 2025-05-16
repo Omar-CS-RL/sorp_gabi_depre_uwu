@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button onclick="document.getElementById('bg-music').play()">Dale play a la música 🎶</button>
 
 <audio id="bg-music" loop>
   <source src="frances_limon.mp3" type="audio/mpeg" />
@@ -17,6 +16,7 @@
 
   <div class="container">
     <h1>❤️ Para Ti, Mi princesa hermosa ❤️</h1>
+    <button id="playMusic" onclick="iniciarMusica()">🎶 Toca aquí para reproducir la música y mira la página hasta el final</button>
     <p>
       Sé que estos días han sido difíciles,<br>
       pero quiero que sepas algo muy simple:<br>
@@ -56,6 +56,12 @@ y tu existencia le da sentido a los momentos que antes parecían vacíos. Por to
   <script>
     function mostrarFrase() {
       document.getElementById("frase").style.display = "block";
+    }
+
+    function iniciarMusica() {
+        const audio = document.getElementById('bg-music');
+        audio.play();
+        document.getElementById('playMusic').style.display = 'none';
     }
   </script>
 </body>
