@@ -16,7 +16,7 @@
 
   <div class="container">
     <h1>❤️ Para Ti, Mi princesa hermosa ❤️</h1>
-    <button id="playMusic" onclick="iniciarMusica()">🎶 Toca aquí para reproducir la música y mira la página hasta el final</button>
+    <button id="playMusic" onclick="iniciarMusica()">🎶 Toca aquí para reproducir la música y mira la página hasta el final 🎶</button>
     <p>
       Sé que estos días han sido difíciles,<br>
       pero quiero que sepas algo muy simple:<br>
@@ -59,10 +59,17 @@ y tu existencia le da sentido a los momentos que antes parecían vacíos. Por to
     }
 
     function iniciarMusica() {
-        const audio = document.getElementById('bg-music');
-        audio.play();
-        document.getElementById('playMusic').style.display = 'none';
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('playMusic');
+
+    if (audio.paused) {
+      audio.play();
+      btn.innerText = "🔇 Toca aquí para detener la música 🔇";
+    } else {
+      audio.pause();
+      btn.innerText = "🎶 Toca aquí para reproducir la música y mira la página hasta el final 🎶";
     }
+  }
   </script>
 </body>
 </html>
